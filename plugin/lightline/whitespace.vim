@@ -1,3 +1,8 @@
+if exists('g:loaded_lightline_whitespace')
+  finish
+endif
+let g:loaded_lightline_whitespace = 1
+
 augroup lightline_whitespace
     autocmd!
     autocmd CursorHold,BufWritePost * call <sid>ws_refresh()
