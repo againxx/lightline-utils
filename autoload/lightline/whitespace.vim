@@ -49,7 +49,7 @@ function! s:conflict_marker()
     return search(pattern, 'nw')
 endfunction
 
-function! lightline#whitespace#check()
+function! lightline#whitespace#check() abort
     let max_lines = get(g:, 'lightline#whitespace#max_lines', 20000)
     if &readonly || !&modifiable || !s:enabled || line('$') > max_lines
     \   || get(b:, 'lightline_whitespace_disabled', 0)
